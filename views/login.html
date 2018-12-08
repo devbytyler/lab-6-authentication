@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="/">
+            Lab 5 - Authentication
+        </a>
+    </nav>
+    <div class="container py-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-container">
+                    <p class="form-header">Login</p>
+                    <form method="POST" action="/login">
+                        <label>Username:</label>
+                        <input class="form-control" type="text" id="username" name="username"><br>
+                        <label>Password:</label>
+                        <input class="form-control" type="password" id="password" name="password"><br>
+                        <input class="btn btn-primary btn-block" type="submit" id="login" value="Login">
+                    </form>
+                </div>
+                <a id="signUpLink" href="/signup">Sign Up</a>
+                <hr>
+                <span id="loginMsg">
+                <%= msg %>
+                </span>
+            </div>
+        </div>
+    </div>    
+</body>
+        
+</html>

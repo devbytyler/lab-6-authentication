@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="myApp"> 
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="/">
+            Lab 5 - Authentication
+        </a>
+        <a class="nav-link" href="/">Home</a>
+    </nav>
+    <div class="container py-5">
+        <div class="card">
+            <div class="card-body">
+                <div ng-controller="myController">
+                    <h2 id="welcomeText">Welcome. You are Logged In as
+                        <%= username %>
+                    </h2>
+                    <hr>
+                    <a class="btn btn-warning" id="logoutLink" href="/logout">Logout User</a>
+                    <a class="btn btn-primary" id="editLink" href="/user">Edit User</a>
+                </div>
+                <br>
+                <span id="indexMsg">
+                    <%= msg %>
+                </span>
+                <br>
+                <span id="colorText">
+                Color
+                    <%= color %>
+                  </span>
+                <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+                <script src="/javascripts/my_app.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+      
+</html>
